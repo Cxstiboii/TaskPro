@@ -1,0 +1,80 @@
+<div class="app">
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-left">
+            <h1>Task<span>.</span>Pro</h1>
+            <p id="header-date"><!-- JS pondrá la fecha aquí --></p>
+        </div>
+    </header>
+
+    <!-- ESTADÍSTICAS -->
+    <div class="stats-bar">
+        <div class="stat-card" id="stat-total">
+            <div class="stat-number" id="count-total">0</div>
+            <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-card" id="stat-pending">
+            <div class="stat-number" id="count-pending">0</div>
+            <div class="stat-label">Pendientes</div>
+        </div>
+        <div class="stat-card" id="stat-done">
+            <div class="stat-number" id="count-done">0</div>
+            <div class="stat-label">Completadas</div>
+        </div>
+        <div class="stat-card" id="stat-high">
+            <div class="stat-number" id="count-high">0</div>
+            <div class="stat-label">Alta prioridad</div>
+        </div>
+    </div>
+
+    <!-- FORMULARIO AGREGAR TAREA -->
+    <div class="add-task-panel">
+        <div class="add-task-row">
+            <input
+                type="text"
+                id="input-task"
+                class="input-text"
+                placeholder="Nueva tarea..."
+                maxlength="80"
+                autocomplete="off"
+            />
+            <select id="select-priority" class="select-priority">
+                <option value="high">🔴 Alta</option>
+                <option value="med" selected>🟡 Media</option>
+                <option value="low">🔵 Baja</option>
+            </select>
+            <button id="btn-add" class="btn-add">+ Agregar</button>
+        </div>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filters">
+        <span class="filter-label">Ver:</span>
+        <button class="btn-filter active" data-filter="all">Todas</button>
+        <button class="btn-filter" data-filter="pending">Pendientes</button>
+        <button class="btn-filter" data-filter="completed">Completadas</button>
+        <button class="btn-filter" data-filter="high">Alta prioridad</button>
+        <div class="filters-right">
+            <button id="btn-clear-done" class="btn-action">Limpiar completadas</button>
+            <button id="btn-clear-all" class="btn-action">Borrar todo</button>
+        </div>
+    </div>
+
+    <!-- LISTA DE TAREAS -->
+    <div id="task-list">
+
+    </div>
+
+    <!-- ESTADO VACÍO -->
+    <div class="empty-state" id="empty-state">
+        <div class="empty-icon">📋</div>
+        <p>No hay tareas aquí.</p>
+    </div>
+
+    <footer>
+        <p>Task Manager Pro &mdash; Built with Vanilla JS</p>
+    </footer>
+
+</div>
+
